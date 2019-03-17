@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { Platform, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import HeaderStyle from './HeaderStyle'
 
@@ -17,11 +17,16 @@ export default class App extends Component {
     };
 
       render() {
+        const headerStyle = Platform.select({
+          ios: HeaderStyle.iOSHeader,
+          android: HeaderStyle.header
+        });
+
         return (
           <View style={{
               flex: 1
           }}>
-            <Text style={HeaderStyle.header}>Restaurant Review</Text>
+            <Text style={headerStyle}>Restaurant Review</Text>
               <TextInput
                   style={
                       styles.input
