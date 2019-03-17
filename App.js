@@ -1,31 +1,31 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+
+import { Text, View } from 'react-native';
 
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
+      <View>
+        <Text style={{
+            padding: 40,
+            fontSize: 30,
+            textAlign: 'center',
+            color: '#0066CC',
+            fontWeight: '300'
+        }}>Restaurant Review</Text>
+          <Text>
+              React Cafe
+          </Text>
+          <Text style={{color: 'grey'}}>
+              123 Anywhere str.
+          </Text>
+          <Text>
+              Funny restaurant
+          </Text>
+          <Text style={{color: 'grey'}}>
+              456 Elsewhere str.
+          </Text>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
