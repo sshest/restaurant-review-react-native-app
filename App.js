@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-
 import { StyleSheet, Text, View } from 'react-native';
+
+import HeaderStyle from './HeaderStyle'
 
 const restaurants = [{
     name: 'React Cafe', address: '123 Anywhere str.'
@@ -15,7 +16,7 @@ export default class App extends Component {
       <View style={{
           flex: 1
       }}>
-        <Text style={styles.header}>Restaurant Review</Text>
+        <Text style={HeaderStyle.header}>Restaurant Review</Text>
           {
               restaurants.map((place, index) => {
                   return (
@@ -45,13 +46,6 @@ export default class App extends Component {
 }
 
 const styles = StyleSheet.create({
-    header: {
-        padding: 40,
-        fontSize: 30,
-        textAlign: 'center',
-        color: '#0066CC',
-        fontWeight: '300'
-    },
     row: {
         flexDirection: 'row'
     },
