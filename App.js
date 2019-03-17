@@ -1,15 +1,29 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { StyleSheet, Text, TextInput, ScrollView, View } from 'react-native';
 
 import Header from 'components/Header';
 
-const restaurants = [{
+const restaurants = [
+    {
         name: 'React Cafe', address: '123 Anywhere str.'
     }, {
         name: 'Funny restaurant', address: '456 Elsewhere str.'
     }, {
         name: 'Tacos', address: '22 Doctor Negrin str.'
-    }];
+    }, {
+       name: "Tony's dinner", address: "Some other address"
+    }, {
+        name: "Teriyaki To Go", address: "Yet another address"
+    }, {
+        name: "Hot Chicken", address: "Yet another address 2"
+    }, {
+        name: "Coffee To Go", address: "Yet another address 3"
+    }, {
+        name: "Dumplin House", address: "Yet another address 4"
+    }, {
+        name: "Bombay Express", address: "Yet another address 5"
+    },
+];
 
 export default class App extends Component {
     state = {
@@ -35,7 +49,11 @@ export default class App extends Component {
                     }
                   }
               />
-              {
+              <ScrollView
+              contentContainerStyle={{
+                  paddingTop: 30
+              }}>
+                {
                   restaurants
                       .filter(place => {
                           return !this.state.search
@@ -62,7 +80,8 @@ export default class App extends Component {
                                   </View>
                               )
                           })
-              }
+                }
+              </ScrollView>
           </View>
         );
       }
@@ -86,7 +105,6 @@ const styles = StyleSheet.create({
         color: 'grey'
     },
     input: {
-        marginBottom: 30,
         padding: 10,
         paddingHorizontal: 20,
         fontSize: 16,
