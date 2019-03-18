@@ -47,7 +47,7 @@ export default class RestaurantRow extends Component {
                 </View>
                 {
                     this.state.showInfo &&
-                    <View>
+                    <View style={styles.info}>
                         <Text>Restaurant Info</Text>
                     </View>
                 }
@@ -85,5 +85,14 @@ const styles = StyleSheet.create({
     buttonText: {
         color: '#0066CC',
         fontSize: 12
+    },
+    info: {
+        marginHorizontal: 40,
+        marginVertical: 10,
+        padding: 10,
+        backgroundColor: '#fff',
+        borderWidth: 1,
+        borderColor: '#ddd',
+        borderRadius: 4
     }
-})
+});

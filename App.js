@@ -80,7 +80,7 @@ export default class App extends Component {
                       restaurants
                           .filter(place => {
                               return !this.state.search
-                                  || place.name.toLowerCase().indexOf(this.state.search.toLowerCase()) > -1;
+                                  || ~place.name.toLowerCase().indexOf(this.state.search.toLowerCase());
                           })
                   }
                   renderItem={
