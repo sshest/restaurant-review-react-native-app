@@ -15,41 +15,41 @@ import PizzaImage from 'images/pizza.png';
 
 const restaurants = [
     {
-        name: 'React Cafe', address: '123 Anywhere str.'
+        name: 'React Cafe', address: '123 Anywhere str.', rating: 3
     }, {
-        name: 'Funny restaurant', address: '456 Elsewhere str.'
+        name: 'Funny restaurant', address: '456 Elsewhere str.', rating: 4.2
     }, {
-        name: 'Tacos', address: '22 Doctor Negrin str.'
+        name: 'Tacos', address: '22 Doctor Negrin str.', rating: 3.6
     }, {
-       name: "Tony's dinner", address: "Some other address"
+       name: "Tony's dinner", address: "Some other address", rating: 3.3
     }, {
-        name: "Teriyaki To Go", address: "Yet another address"
+        name: "Teriyaki To Go", address: "Yet another address", rating: 5
     }, {
-        name: "Hot Chicken", address: "Yet another address 2"
+        name: "Hot Chicken", address: "Yet another address 2", rating: 4
     }, {
-        name: "Coffee To Go", address: "Yet another address 3"
+        name: "Coffee To Go", address: "Yet another address 3", rating: 2
     }, {
-        name: "Dumplin House", address: "Yet another address 4"
+        name: "Dumplin House", address: "Yet another address 4", rating: 1.5
     }, {
-        name: "Bombay Express", address: "Yet another address 5"
+        name: "Bombay Express", address: "Yet another address 5", rating: 2
     }, {
-        name: 'React Cafe2', address: '123 Anywhere str.'
+        name: 'React Cafe2', address: '123 Anywhere str.', rating: 3.2
     }, {
-        name: 'Funny restaurant2', address: '456 Elsewhere str.'
+        name: 'Funny restaurant2', address: '456 Elsewhere str.', rating: 4.2
     }, {
-        name: 'Tacos2', address: '22 Doctor Negrin str.'
+        name: 'Tacos2', address: '22 Doctor Negrin str.', rating: 3.5
     }, {
-        name: "Tony's dinne2r", address: "Some other address"
+        name: "Tony's dinne2r", address: "Some other address", rating: 1.3
     }, {
-        name: "Teriyaki To Go2", address: "Yet another address"
+        name: "Teriyaki To Go2", address: "Yet another address", rating: 2.6
     }, {
-        name: "Hot Chicken2", address: "Yet another address 2"
+        name: "Hot Chicken2", address: "Yet another address 2", rating: 2.4
     }, {
-        name: "Coffee To Go2", address: "Yet another address 3"
+        name: "Coffee To Go2", address: "Yet another address 3", rating: 3.6
     }, {
-        name: "Dumplin House2", address: "Yet another address 4"
+        name: "Dumplin House2", address: "Yet another address 4", rating: 1.7
     }, {
-        name: "Bombay Express3", address: "Yet another address 5"
+        name: "Bombay Express3", address: "Yet another address 5", rating: 3
     },
 ];
 
