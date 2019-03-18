@@ -53,8 +53,17 @@ const restaurants = [
 
 export default class App extends Component {
     state = {
-        search: null
+        search: null,
+        restaurants: []
     };
+
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({
+                restaurants: restaurants
+            })
+        }, 1000);
+    }
 
       render() {
         return (
@@ -77,7 +86,7 @@ export default class App extends Component {
               />
               <FlatList
                   data={
-                      restaurants
+                      this.state.restaurants
                           .filter(place => {
                               return !this.state.search
                                   || ~place.name.toLowerCase().indexOf(this.state.search.toLowerCase());
@@ -87,7 +96,7 @@ export default class App extends Component {
                       ({item, index}) => <RestaurantRow place={item} index={index}/>
                   }
                   keyExtractor={item => item.name}
-                  initialNumberToRender={18}/>
+                  initialNumberToRender={20}/>
           </View>
         );
       }
