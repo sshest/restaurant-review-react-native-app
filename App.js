@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {
     FlatList,
+    Image,
     StyleSheet,
     Text,
     TextInput,
@@ -10,6 +11,7 @@ import {
 
 import Header from 'components/Header';
 import RestaurantRow from 'components/RestaurantRow';
+import PizzaImage from 'images/pizza.png';
 
 const restaurants = [
     {
@@ -70,6 +72,16 @@ export default class App extends Component {
           <View style={{
               flex: 1
           }}>
+              <View style={{
+                  marginTop: 30,
+                  alignItems: 'center'
+              }}>
+                  <Image source={PizzaImage}
+                        style={{
+                            height: 150,
+                            width: 150
+                        }}/>
+              </View>
               <Header/>
               <TextInput
                   style={
@@ -96,7 +108,7 @@ export default class App extends Component {
                       ({item, index}) => <RestaurantRow place={item} index={index}/>
                   }
                   keyExtractor={item => item.name}
-                  initialNumberToRender={20}/>
+                  initialNumberToRender={15}/>
           </View>
         );
       }
