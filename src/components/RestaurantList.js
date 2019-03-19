@@ -105,7 +105,10 @@ export default class RestaurantList extends Component {
                             })
                     }
                     renderItem={
-                        ({item, index}) => <RestaurantRow place={item} index={index}/>
+                        ({item, index}) => <RestaurantRow
+                            place={item}
+                            index={index}
+                            navigation={this.props.navigation}/>
                     }
                     keyExtractor={item => item.name}
                     initialNumberToRender={15}/>
