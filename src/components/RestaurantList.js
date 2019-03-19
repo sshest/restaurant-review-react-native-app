@@ -54,6 +54,10 @@ const restaurants = [
 ];
 
 export default class RestaurantList extends Component {
+    static navigationOptions = {
+        header: null
+    };
+
     state = {
         search: null,
         restaurants: []
